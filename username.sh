@@ -12,7 +12,7 @@ echo "It must contain at least three but no more than 12 characters."
 echo "Enter username:"
 read NAME
 
-while echo "$NAME" | egrep -v "^[a-z]([0-9]|[a-z]|_){2,11}$" > /dev/null 2>&1
+while echo "$NAME" | egrep -v "^[a-z][a-z0-9_]{2,11}$" > /dev/null 2>&1
 do
 	echo "You must enter a valid username! Remember the rules."
 	echo "Enter a valid username:"
